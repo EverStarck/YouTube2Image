@@ -1,16 +1,10 @@
 import Head from "next/head";
-import { useState } from "react";
 
-import SearchFrame from "../components/SearchFrame/SearchFrame";
-import Loader from "../components/Loader";
+import ApiDataProvider from "../context/ApiDataContext";
+
+import AppMain from "../components/AppMain";
 
 export default function Home() {
-  const [data, setData] = useState({
-    ytData: [],
-    ready: false,
-    loading: false,
-  });
-
   return (
     <>
       <Head>
@@ -18,11 +12,9 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      {data.loading ? (
-        <Loader />
-      ) : (
-        <SearchFrame data={data} setData={setData} />
-      )}
+      <ApiDataProvider>
+        <AppMain />
+      </ApiDataProvider>
     </>
   );
 }

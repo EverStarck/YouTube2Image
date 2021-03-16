@@ -3,13 +3,13 @@ import SearchBarContainer from "../SearchBar/SearchBarContainer";
 import Footer from "./Footer";
 import Name from "./Name";
 
-const SearchFrame = ({setData, data}) => {
+const SearchFrame = () => {
   return (
     <MainSearch>
       <Name />
 
       <section>
-        <SearchBarContainer setData={setData} data={data}/>
+        <SearchBarContainer/>
       </section>
 
       <Footer />

@@ -1,4 +1,6 @@
 import styled from "@emotion/styled";
+import { useContext } from "react";
+import { ApiDataContext } from "../../context/ApiDataContext";
 
 // Media querys in stylesSearchFrame.js
 const LabelInput = styled.label`
@@ -8,7 +10,7 @@ const LabelInput = styled.label`
   font-size: clamp(0.6rem, 1.5vw, 0.875rem);
   font-weight: 500;
   span {
-    display: ${props => props.data.ready ? "none" : "block"};
+    display: ${(props) => (props.data.ready ? "none" : "block")};
   }
   input[type="url"] {
     background-color: var(--real-white);
@@ -29,7 +31,10 @@ const LabelInput = styled.label`
   }
 `;
 
-const Input = ({ searchValue, setSearchValue, data }) => {
+const Input = ({ searchValue, setSearchValue }) => {
+  // Context
+  const { data } = useContext(ApiDataContext);
+
   const refreshInputValue = (e) => {
     setSearchValue(e.target.value);
   };

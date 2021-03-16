@@ -1,11 +1,17 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { fetcher } from "../../services/fetchData";
+
+// Context
+import {ApiDataContext} from '../../context/ApiDataContext'
 
 // Components
 import Error from "../Error";
 import SearchBar from "./SearchBar";
 
-const SearchBarContainer = ({ setData, data }) => {
+const SearchBarContainer = () => {
+  // Context
+  const { data, setData } = useContext(ApiDataContext);
+
   const [searchValue, setSearchValue] = useState("");
   const [error, setError] = useState(false);
 
@@ -53,7 +59,7 @@ const SearchBarContainer = ({ setData, data }) => {
       {error ? <Error errorText="Incorrect link, please, check it" /> : null}
 
       {/* Form */}
-      <SearchBar searchValue={searchValue} setSearchValue={setSearchValue} searchSubmit={searchSubmit} data={data}/>
+      <SearchBar searchValue={searchValue} setSearchValue={setSearchValue} searchSubmit={searchSubmit}/>
     </>
   );
 };

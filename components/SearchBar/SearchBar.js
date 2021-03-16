@@ -1,16 +1,15 @@
 // Styles
-import { FormSearch, error } from "../../styles/stylesSearchFrame";
+import { FormSearch } from "../../styles/stylesSearchFrame";
 // Components
 import Button from "./Button";
 import Input from "./Input";
 
-const SearchBar = ({ searchValue, setSearchValue, searchSubmit, data }) => {
+const SearchBar = ({ searchValue, setSearchValue, searchSubmit }) => {
   return (
     <FormSearch onSubmit={searchSubmit}>
       <Input
         searchValue={searchValue}
         setSearchValue={setSearchValue}
-        data={data}
       />
       <Button />
     </FormSearch>
