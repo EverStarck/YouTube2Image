@@ -1,6 +1,15 @@
 import { useState } from "react";
-import Banner from "./Banner";
+import styled from "@emotion/styled";
+import AvatarAndBanner from "./AvatarAndBanner";
 import Nav from "./Nav";
+
+const HeaderInfo = styled.section`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+`;
 
 const Header = () => {
   const [bannerAndAvatar, setBannerAndAvatar] = useState({
@@ -9,12 +18,18 @@ const Header = () => {
   });
   return (
     <>
-      {/* <h1>Header</h1> */}
       <Nav />
-      <Banner
-        bannerAndAvatar={bannerAndAvatar}
-        setBannerAndAvatar={setBannerAndAvatar}
-      />
+      <HeaderInfo>
+        <AvatarAndBanner
+          bannerAndAvatar={bannerAndAvatar}
+          setBannerAndAvatar={setBannerAndAvatar}
+        />
+        <AvatarAndBanner
+          bannerAndAvatar={bannerAndAvatar}
+          setBannerAndAvatar={setBannerAndAvatar}
+          isBanner={false}
+        />
+      </HeaderInfo>
     </>
   );
 };
