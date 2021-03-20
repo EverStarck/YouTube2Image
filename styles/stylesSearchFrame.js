@@ -15,15 +15,6 @@ export const NameGroup = styled.hgroup`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  h1 {
-    font-size: clamp(1.5rem, 5vw, 4.5rem);
-    margin: 0;
-  }
-  h2 {
-    font-size: clamp(0.75rem, 2vw, 1.5rem);
-    margin: 8px 0 24px 0;
-    font-weight: 600;
-  }
 `;
 
 export const FormSearch = styled.form`

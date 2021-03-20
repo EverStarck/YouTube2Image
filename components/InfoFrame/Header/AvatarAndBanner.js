@@ -4,6 +4,7 @@ import styled from "@emotion/styled";
 import { ApiDataContext } from "../../../context/ApiDataContext";
 
 const BannerDiv = styled.div`
+  z-index: 1;
   height: 300px;
   img {
     height: 300px;
@@ -23,6 +24,7 @@ const AvatarDiv = styled.div`
   height: 260px;
   position: absolute;
   top: 50%;
+  z-index: 2;
   img {
     height: 260px;
     width: 100%;

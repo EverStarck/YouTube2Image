@@ -6,7 +6,7 @@ import Name from "./Name";
 const SearchFrame = () => {
   return (
     <MainSearch>
-      <Name />
+      <Name h1='YoutubeApiStarck' h2='The Tony Starck of the Youtube channel APIs'/>
 
       <section>
         <SearchBarContainer/>

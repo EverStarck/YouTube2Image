@@ -11,6 +11,8 @@ const NavInfo = styled.nav`
   height: 96px;
   background-color: var(--white);
   box-shadow: 0px 2px 5px rgba(2, 10, 20, 0.25);
+  position: relative;
+  z-index: 3;
   a {
     margin-right: 32px;
   }

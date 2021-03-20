@@ -1,7 +1,10 @@
-import { useState } from "react";
+import {useState } from "react";
 import styled from "@emotion/styled";
+
 import AvatarAndBanner from "./AvatarAndBanner";
 import Nav from "./Nav";
+import TextInfo from './TextInfo'
+
 
 const HeaderInfo = styled.section`
   display: flex;
@@ -30,6 +33,8 @@ const Header = () => {
           isBanner={false}
         />
       </HeaderInfo>
+
+      <TextInfo />
     </>
   );
 };
