@@ -23,10 +23,10 @@ const BannerDiv = styled.div`
 const AvatarDiv = styled.div`
   height: 260px;
   position: absolute;
-  top: 50%;
+  top: 65%;
   z-index: 2;
   img {
-    height: 260px;
+    height: 200px;
     width: 100%;
     object-fit: cover;
     border-radius: 50%;
@@ -81,8 +81,8 @@ const AvatarAndBanner = ({
               <Image
                 src={bannerAndAvatar.avatar[0].url}
                 alt={`Banner of the youtuber called ${data.ytData[0].channelInfo.title}`}
-                width={260}
-                height={260}
+                width={200}
+                height={200}
               />
             </AvatarDiv>
           )}

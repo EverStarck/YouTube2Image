@@ -17,7 +17,7 @@ const TextInfoStyled = styled.article`
   }
   /* Mobile */
   @media only screen and (max-width: 500px) {
-    margin-top: 42px;
+    margin-top: 50px;
     h2 {
       margin-top: 2px;
     }
