@@ -17,6 +17,10 @@ const TitleFrameStyled = styled.div`
       font-size: clamp(0.75rem, 3vw, 1.125rem);
     }
   }
+  .ButtonsArea {
+    display: flex;
+    justify-content: space-between;
+  }
 `;
 
 const TitleFrame = ({ urlSelected, setUrlSelected, h3, isBannerSelect }) => {
@@ -30,15 +34,17 @@ const TitleFrame = ({ urlSelected, setUrlSelected, h3, isBannerSelect }) => {
       </div>
       <Hr />
 
-      <QualityButton
-        isBannerSelect={isBannerSelect}
-        urlSelected={urlSelected}
-        setUrlSelected={setUrlSelected}
-      />
-      <DownloadButton
-        urlSelected={urlSelected}
-        isBannerSelect={isBannerSelect}
-      />
+      <div className="ButtonsArea">
+        <QualityButton
+          isBannerSelect={isBannerSelect}
+          urlSelected={urlSelected}
+          setUrlSelected={setUrlSelected}
+        />
+        <DownloadButton
+          urlSelected={urlSelected}
+          isBannerSelect={isBannerSelect}
+        />
+      </div>
     </TitleFrameStyled>
   );
 };

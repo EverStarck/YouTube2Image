@@ -10,7 +10,7 @@ const Select = styled.label`
   .selectDiv {
     margin-top: 12px;
     position: relative;
-    width: 50%;
+    width: 120%;
     &::after {
       content: "";
       width: 0.8em;
@@ -37,6 +37,17 @@ const Select = styled.label`
       }
     }
   }
+
+  @media only screen and (max-width: 1124px) {
+    .selectDiv {
+      &::after {
+        top: 40%;
+      }
+      select {
+        padding: 12px;
+      }
+    }
+  }
 `;
 
 const QualityButton = ({
@@ -51,12 +62,12 @@ const QualityButton = ({
     if (isBannerSelect) {
       setUrlSelected((urlSelected) => ({
         ...urlSelected,
-        banner: e.target.value,
+        banner: JSON.parse(e.target.value),
       }));
     } else {
       setUrlSelected((urlSelected) => ({
         ...urlSelected,
-        avatar: e.target.value,
+        avatar: JSON.parse(e.target.value),
       }));
     }
   };
@@ -68,12 +79,12 @@ const QualityButton = ({
         <select onChange={setUrlToDownload}>
           {isBannerSelect
             ? data.ytData[0].banner.map((banner) => (
-                <option value={banner.url} key={banner.url}>
+                <option value={JSON.stringify(banner)} key={banner.url}>
                   {banner.height} x {banner.width}
                 </option>
               ))
             : data.ytData[0].avatar.map((avatar) => (
-                <option value={avatar.url} key={avatar.url}>
+                <option value={JSON.stringify(avatar)} key={avatar.url}>
                   {avatar.height} x {avatar.width}
                 </option>
               ))}

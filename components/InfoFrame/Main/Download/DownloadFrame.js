@@ -16,10 +16,19 @@ const DownloadFrameStyled = styled.main`
     width: 60%;
   }
 
+  @media only screen and (max-width: 1158px) {
+    .items {
+      width: 70%;
+    }
+  }
+
   /* Just one item */
-  @media only screen and (max-width: 800px) {
+  @media only screen and (max-width: 920px) {
+  margin: 25px 0;
     .items {
       flex-direction: column;
+      width: 90%;
+      row-gap: 32px;
     }
   }
 `;
@@ -29,8 +38,8 @@ const DownloadFrame = () => {
   const { data } = useContext(ApiDataContext);
 
   const [urlSelected, setUrlSelected] = useState({
-    banner: data.ytData[0].banner[0].url,
-    avatar: data.ytData[0].avatar[0].url,
+    banner: data.ytData[0].banner[0],
+    avatar: data.ytData[0].avatar[0],
   });
 
   return (
