@@ -1,9 +1,6 @@
 import styled from "@emotion/styled";
-import { useContext, useState } from "react";
 
-import { ApiDataContext } from "../../../../context/ApiDataContext";
 import DownloadButton from "./DownloadButton";
-
 import H3 from "./H3";
 import Hr from "./Hr";
 import QualityButton from "./QualityButton";
@@ -38,7 +35,10 @@ const TitleFrame = ({ urlSelected, setUrlSelected, h3, isBannerSelect }) => {
         urlSelected={urlSelected}
         setUrlSelected={setUrlSelected}
       />
-      <DownloadButton urlSelected={urlSelected}/>
+      <DownloadButton
+        urlSelected={urlSelected}
+        isBannerSelect={isBannerSelect}
+      />
     </TitleFrameStyled>
   );
 };

@@ -32,6 +32,7 @@ const DownloadFrame = () => {
     banner: data.ytData[0].banner[0].url,
     avatar: data.ytData[0].avatar[0].url,
   });
+
   return (
     <DownloadFrameStyled>
       <div className="items">
