@@ -8,7 +8,7 @@ import {ApiDataContext} from '../../context/ApiDataContext'
 import Error from "../Error";
 import SearchBar from "./SearchBar";
 
-const SearchBarContainer = () => {
+const SearchBarContainer = ({inputH, buttonH}) => {
   // Context
   const { data, setData } = useContext(ApiDataContext);
 
@@ -59,7 +59,7 @@ const SearchBarContainer = () => {
       {error ? <Error errorText="Incorrect link, please, check it" /> : null}
 
       {/* Form */}
-      <SearchBar searchValue={searchValue} setSearchValue={setSearchValue} searchSubmit={searchSubmit}/>
+      <SearchBar searchValue={searchValue} setSearchValue={setSearchValue} searchSubmit={searchSubmit} inputH={inputH} buttonH={buttonH}/>
     </>
   );
 };

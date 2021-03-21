@@ -17,7 +17,7 @@ const LabelInput = styled.label`
     border: 3px solid var(--real-white);
     border-radius: var(--radius) 0 0 var(--radius);
     padding-left: 24px;
-    height: 64px;
+    height: ${(props) => props.inputH};
     width: 682px;
     transition: 0.3s;
     font-size: 1rem;
@@ -31,7 +31,7 @@ const LabelInput = styled.label`
   }
 `;
 
-const Input = ({ searchValue, setSearchValue }) => {
+const Input = ({ inputH = "64px", searchValue, setSearchValue }) => {
   // Context
   const { data } = useContext(ApiDataContext);
 
@@ -40,7 +40,7 @@ const Input = ({ searchValue, setSearchValue }) => {
   };
 
   return (
-    <LabelInput data={data}>
+    <LabelInput data={data} inputH={inputH}>
       <span>Put here your link of the youtube channel</span>
       <input
         type="url"
