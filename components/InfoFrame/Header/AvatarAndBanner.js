@@ -35,6 +35,8 @@ const AvatarDiv = styled.div`
   /* Mobile */
   @media only screen and (max-width: 500px) {
     height: 88px;
+    width: 88px;
+    top: 50%;
     img {
       height: 88px;
     }
