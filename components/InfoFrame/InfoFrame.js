@@ -11,8 +11,6 @@ const InfoFrame = () => {
   const { data } = useContext(ApiDataContext);
   const info = data.ytData[0].channelInfo;
 
-  console.log(`${info.title} is family friendly?. See ${info.title} keywords, description and download banner and avatar profile picture`);
-
   const SEO = {
     title: `⬇ ${info.title} Banner and Avatar`,
     description: `${info.title} is family friendly?. See ${info.title} keywords, description and download banner and avatar profile picture`,

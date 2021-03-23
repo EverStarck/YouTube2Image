@@ -2,13 +2,13 @@ import { useContext, useState } from "react";
 import { fetcher } from "../../services/fetchData";
 
 // Context
-import {ApiDataContext} from '../../context/ApiDataContext'
+import { ApiDataContext } from "../../context/ApiDataContext";
 
 // Components
 import Error from "../Error";
 import SearchBar from "./SearchBar";
 
-const SearchBarContainer = ({inputH, buttonH}) => {
+const SearchBarContainer = ({ inputH, buttonH }) => {
   // Context
   const { data, setData } = useContext(ApiDataContext);
 
@@ -24,7 +24,10 @@ const SearchBarContainer = ({inputH, buttonH}) => {
     let newSearchValue = searchValue.replace(/\s/g, "");
     // Change http by https
     if (!searchValue.includes("https"))
-      newSearchValue = newSearchValue.toLowerCase().replace(/http/, "https");
+      newSearchValue = newSearchValue.replace(/http/, "https");
+    // Add www
+    if (!searchValue.includes("www.youtube"))
+      newSearchValue = newSearchValue.replace(/youtube.com/, "www.youtube.com");
     // Check if the link is a channel
     if (newSearchValue.includes(".com/watch")) {
       setError(true);
@@ -55,11 +58,19 @@ const SearchBarContainer = ({inputH, buttonH}) => {
   return (
     <>
       {/* Errors */}
-      {data.ytData[0] === "Error, youtube channel doesn't exist" ? <Error errorText="Youtube channel doesn't exist"/> : null}
+      {data.ytData[0] === "Error, youtube channel doesn't exist" ? (
+        <Error errorText="Youtube channel doesn't exist" />
+      ) : null}
       {error ? <Error errorText="Incorrect link, please, check it" /> : null}
 
       {/* Form */}
-      <SearchBar searchValue={searchValue} setSearchValue={setSearchValue} searchSubmit={searchSubmit} inputH={inputH} buttonH={buttonH}/>
+      <SearchBar
+        searchValue={searchValue}
+        setSearchValue={setSearchValue}
+        searchSubmit={searchSubmit}
+        inputH={inputH}
+        buttonH={buttonH}
+      />
     </>
   );
 };

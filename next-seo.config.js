@@ -6,7 +6,7 @@ export default {
     type: "website",
     locale: "en_IE",
     url: "https://www.yt2img.everstarck.com",
-    site_name: "YoutubeApiStarck",
+    site_name: "YouTube2Image",
     images: [
       {
         url: "./yt2image.png",
