@@ -8,8 +8,8 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
+        <title>Donwload your YouTube Banner and Avatar!</title>
+        <link rel="icon" href="/logo.svg" />
       </Head>
 
       <ApiDataProvider>
