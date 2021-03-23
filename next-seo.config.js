@@ -12,7 +12,7 @@ export default {
         url: "./yt2image.png",
         width: 800,
         height: 600,
-        alt: "Image of the site youtubeToImage.everstarck.com",
+        alt: "Image of the site YouTubeToImage.everstarck.com",
       },
     ],
   },
