@@ -68,7 +68,7 @@ export const FormSearch = styled.form`
 `;
 
 export const FooterSearch = styled.footer`
-  font-size: clamp(0.7rem, 2vw, 1rem);
+  font-size: clamp(0.75rem, 2vw, 1rem);
   position: absolute;
   bottom: 0;
 `;

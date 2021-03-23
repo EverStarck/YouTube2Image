@@ -7,7 +7,7 @@ const LabelInput = styled.label`
   display: flex;
   flex-direction: column-reverse;
   cursor: text;
-  font-size: clamp(0.6rem, 1.5vw, 0.875rem);
+  font-size: clamp(.75rem, 1.5vw, 0.875rem);
   font-weight: 500;
   span {
     display: ${(props) => (props.data.ready ? "none" : "block")};
