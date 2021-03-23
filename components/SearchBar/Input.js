@@ -7,7 +7,7 @@ const LabelInput = styled.label`
   display: flex;
   flex-direction: column-reverse;
   cursor: text;
-  font-size: clamp(.75rem, 1.5vw, 0.875rem);
+  font-size: clamp(0.75rem, 1.5vw, 0.875rem);
   font-weight: 500;
   span {
     display: ${(props) => (props.data.ready ? "none" : "block")};
@@ -28,6 +28,11 @@ const LabelInput = styled.label`
     :focus {
       border: 3px solid var(--black);
     }
+  }
+
+  /* Mobile */
+  @media only screen and (max-width: 500px) {
+    width: 100%
   }
 `;
 

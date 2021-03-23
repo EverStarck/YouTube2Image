@@ -26,10 +26,13 @@ const NavInfo = styled.nav`
     .logo {
       display: none;
     }
+    section {
+      width: 90%;
+    }
   }
 `;
 
-const Nav = ({inputH, buttonH}) => {
+const Nav = ({ inputH, buttonH }) => {
   return (
     <NavInfo>
       <div className="logo">
@@ -45,7 +48,7 @@ const Nav = ({inputH, buttonH}) => {
         </Link>
       </div>
       <section>
-        <SearchBarContainer inputH="50px" buttonH="50px"/>
+        <SearchBarContainer inputH="50px" buttonH="50px" />
       </section>
     </NavInfo>
   );
