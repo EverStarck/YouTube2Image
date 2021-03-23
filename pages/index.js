@@ -1,12 +1,14 @@
 import ApiDataProvider from "../context/ApiDataContext";
 
 import AppMain from "../components/AppMain";
-import HeadComponent from "../components/HeadComponent";
+
+import {DefaultSeo} from 'next-seo'
+import SEO from '../next-seo.config.js';
 
 export default function Home() {
   return (
     <>
-      <HeadComponent />
+      <DefaultSeo {...SEO} />
 
       <ApiDataProvider>
         <AppMain />

@@ -50,7 +50,7 @@ const Input = ({ inputH = "64px", searchValue, setSearchValue }) => {
       <input
         type="url"
         value={searchValue}
-        placeholder="https://www.youtube.com/c/midudev"
+        placeholder="https://www.youtube.com/user/PewDiePie"
         onChange={refreshInputValue}
         required
       />
