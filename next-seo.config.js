@@ -1,7 +1,8 @@
 export default {
-  title: "⬇ Donwload your YouTube Banner and Avatar",
+  title: "⬇ Download your YouTube Banner and Avatar",
   description:
-    "✅Is your YouTube  channel FAMILY FRIENDLY? Discover it and download your Banner and Avatar from your channel with just one click",
+    "✅ Is your YouTube  channel FAMILY FRIENDLY? Discover it and download your Banner and Avatar from your channel with just one click",
+  canonical: "https://www.canonical.ie/",
   openGraph: {
     type: "website",
     locale: "en_IE",
@@ -55,7 +56,8 @@ export default {
     },
     {
       name: "keywords",
-      content: "Download, Youtube, Free, Banner, Avatar, Channel, Family friendly, black list, download banner youtube, download avatar youtube",
+      content:
+        "Download, Youtube, Free, Banner, Avatar, Channel, Family friendly, black list, download banner youtube, download avatar youtube",
     },
   ],
   twitter: {
