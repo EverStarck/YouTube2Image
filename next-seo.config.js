@@ -59,6 +59,10 @@ export default {
       content:
         "Download, Youtube, Free, Banner, Avatar, Channel, Family friendly, black list, download banner youtube, download avatar youtube",
     },
+    {
+      name: "google-site-verification",
+      content: "ZJbTYzN7mCOFKfUVozRPtd02757Q7IFuxa8xU-66s48",
+    },
   ],
   twitter: {
     handle: "@EverStarck",
