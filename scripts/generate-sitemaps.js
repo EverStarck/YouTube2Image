@@ -4,7 +4,7 @@ const path = require("path");
 sitemap({
   baseUrl: "https://yt2img.everstarck.com",
   pagesDirectory: path.resolve(__dirname, "../out/server/pages"),
-  targetDirectory: path.resolve(__dirname, "../pages/"),
+  targetDirectory: path.resolve(__dirname, "../out/server/pages"),
   ignoredExtensions: [
     "js",
     "map",
