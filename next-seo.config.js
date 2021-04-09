@@ -10,7 +10,7 @@ export default {
     site_name: "YouTube2Image",
     images: [
       {
-        url: "./yt2image.png",
+        url: "https://yt2img.everstarck.com/yt2image.png",
         width: 800,
         height: 600,
         alt: "Image of the site YouTubeToImage.everstarck.com",
