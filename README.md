@@ -1,34 +1,89 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+![Twitter Follow](https://img.shields.io/twitter/follow/EverStarck?style=social)
+
+<!-- PROJECT LOGO -->
+<hr />
+<br />
+<p align="center">
+  <a href="https://yt2img.everstarck.com">
+    <img src="readme/images/logo.svg" alt="Logo" width="94" height="67">
+  </a>
+
+  <h2 align="center">YouTube2Image</h2>
+  <p align="center">
+    The Tony Stark of the YouTube Downloaders!
+    <br />
+    <br />
+    <a href="https://yt2img.everstarck.com">Visit site</a>
+    ·
+    <a href="https://github.com/EverStarck/YouTube2Image/issues">Report Bug</a>
+    ·
+    <a href="https://github.com/EverStarck/YouTube2Image/issues">Request Feature</a>
+
+  </p>
+</p>
+
+<!-- ABOUT THE PROJECT -->
+<br />
+
+## About yt2img
+[![ScreenShot of the youtube to image project][product-screenshot]](https://yt2img.everstarck.com)
+
+✅ Is your YouTube  channel FAMILY FRIENDLY? Discover it and download your Banner and Avatar from your channel with just one click
+
+<!-- GETTING STARTED -->
 
 ## Getting Started
 
-First, run the development server:
+It is easy to run this site on your computer, you only need `Node` and `NPM`.
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+
+- npm
+  ```sh
+  npm install npm@latest -g
+  ```
+
+### Installation
+1. [Deploy the backend](https://github.com/EverStarck/YouTube2Image-API)
+2. Clone the repo
+   ```sh
+   git clone https://github.com/EverStarck/YouTube2Image.git
+   ```
+3. Install NPM packages
+   ```sh
+   npm install
+   ```
+4. Change your API url in `/services/fetchData.js`
+   ```JS
+   const response = await fetch(`YourApiUrlHere/info?url=${url}`)
+   ```
+
+<!-- USAGE EXAMPLES -->
+
+## Usage
+
+Just run `npm run dev` in your terminal.
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+<!-- CONTRIBUTING -->
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+## Contributing
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are **greatly appreciated**.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+1. Fork the Project
+2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the Branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
-## Learn More
 
-To learn more about Next.js, take a look at the following resources:
+<!-- CONTACT -->
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Contact
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+[@EverStarck](https://twitter.com/EverStarck)
 
-## Deploy on Vercel
+[https://github.com/EverStarck/YouTube2Image](https://github.com/EverStarck/YouTube2Image)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+<!-- MARKDOWN LINKS & IMAGES -->
+[product-screenshot]: readme/images/yt2image.png
